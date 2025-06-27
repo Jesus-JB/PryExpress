@@ -1,7 +1,9 @@
+/* globals Chart:false */
+
 (() => {
   'use strict'
 
-  // Gráfico
+  // Graphs
   const ctx = document.getElementById('myChart')
   new Chart(ctx, {
     type: 'line',
@@ -16,7 +18,15 @@
         'Saturday'
       ],
       datasets: [{
-        data: [15339, 21345, 18483, 24003, 23489, 24092, 12034],
+        data: [
+          15339,
+          21345,
+          18483,
+          24003,
+          23489,
+          24092,
+          12034
+        ],
         lineTension: 0,
         backgroundColor: 'transparent',
         borderColor: '#007bff',
@@ -36,7 +46,7 @@
     }
   })
 
-  // Cambio de tema
+  // Theme toggler
   const getStoredTheme = () => localStorage.getItem('theme')
   const setStoredTheme = theme => localStorage.setItem('theme', theme)
 
